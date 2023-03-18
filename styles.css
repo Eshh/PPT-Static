@@ -1,0 +1,99 @@
+:root {
+  /* Color */
+  --page-1-color: steelblue;
+  --page-2-color: tan;
+  --page-3-color: teal;
+  --page-4-color: slateblue;
+
+  /* Speed */
+  --animation-speed: 2s;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+/* Page colors */
+
+#page-1 {
+  background-color: var(--page-1-color);
+}
+#page-2 {
+  background-color: var(--page-2-color);
+}
+#page-3 {
+  background-color: var(--page-3-color);
+}
+#page-4 {
+  background-color: var(--page-4-color);
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+  padding: 0 4rem;
+}
+
+.page h1 {
+  font-size: 4rem;
+  line-height: 1.2;
+  margin: 1rem;
+}
+
+#page-1 h1 {
+  transform: translateY(-1200px);
+  animation: headingSlider var(--animation-speed) ease-in forwards;
+}
+
+#page-1 p {
+  transform: translateX(-1800px);
+  animation: paraSlider var(--animation-speed) 1s ease-in forwards;
+}
+
+@keyframes headingSlider {
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes paraSlider {
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.page p {
+  font-size: 1.3rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 1rem 2rem;
+  background-color: #f4f4f4;
+  color: #333;
+  text-decoration: none;
+  border: none;
+  border-radius: 0.3rem;
+  margin-top: 1rem;
+  font-size: 1.1rem;
+  transition: all 0.3s ease-in;
+}
+
+.btn:hover,
+.btn-dark {
+  color: #f4f4f4;
+  background-color: #333;
+}
+
+.btn-dark:hover {
+  color: #333;
+  background-color: #f4f4f4;
+}
